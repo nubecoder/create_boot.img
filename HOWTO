@@ -1,0 +1,16 @@
+How To properly package a boot.img for MTD support on Epic 4G (SPH-D700).
+
+1 - Build a kernel using the included stage1 initramfs (initramfs_stage1).
+2 - Copy the zImage to your working directory.
+
+For CM7 / MIUI:
+3 - Make any desired changes to the initramfs files in initramfs_cm7.
+4 - Run the create_boot.img.sh script with the cm arg.
+    "./create_boot.img.sh cm"
+
+For TouchWiz:
+3 - Make any desired changes to the initramfs files in initramfs_tw.
+4 - Run the create_boot.img.sh script with the tw arg.
+    "./create_boot.img.sh tw"
+
+5 - Create a flashable zip to install the newly created boot.img.
